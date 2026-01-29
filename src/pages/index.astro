@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.jsx";
 import Section from "../components/Section.jsx";
 import skillsBg from "../assets/skills-bg.png";
+import contactBg from "../assets/contact-bg.png";
 ---
 
 <Layout title="Jordan Friesen | Front End Developer">
@@ -12,7 +13,7 @@ import skillsBg from "../assets/skills-bg.png";
 		<div class="relative z-20 bg-slate-950 pb-20">
 			<Section
 				client:visible
-				title="My Technical Arsenal"
+				title="Technical Arsenal"
 				description="A comprehensive array of battle-tested frontend technologies and frameworks. Deployed for high-performance, scalable web solutions."
 				color="cyan"
 				image={skillsBg}
@@ -22,18 +23,23 @@ import skillsBg from "../assets/skills-bg.png";
 
 			<Section
 				client:visible
-				title="Interactive React Components"
-				description="Seamlessly integrate React components within your Astro islands. Hydrate them only when needed using client directives for optimal performance."
+				title="Establish Comms"
+				description="Ready to mobilize? Initiate a secure connection to discuss potential deployments, collaborations, or technical directives."
 				reverse={true}
 				color="purple"
+				image={contactBg}
+				href="/contact"
+				buttonText="Open Channel"
 			/>
 
-			<Section
+			{
+				/* <Section
 				client:visible
 				title="TailwindCSS v4 Power"
 				description="Style your application with the utility-first power of TailwindCSS. Now even faster and simpler with the latest v4 engine and Vite integration."
 				color="blue"
-			/>
+			/> */
+			}
 		</div>
 
 		<footer

@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactForm from "../components/ContactForm.jsx";
+---
+
+<Layout title="Establish Comms | Jordan Friesen">
+    <div
+        className="relative min-h-screen bg-slate-950 flex items-center justify-center py-20 px-4"
+    >
+        <div
+            className="relative z-10 w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center"
+        >
+            {/* Left Column: Text */}
+            <div className="text-left space-y-8"></div>
+
+            {/* Right Column: Form */}
+            <div className="w-full">
+                <ContactForm client:visible />
+            </div>
+        </div>
+    </div>
+</Layout>
