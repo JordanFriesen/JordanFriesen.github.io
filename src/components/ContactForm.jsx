@@ -5,7 +5,7 @@ export default function ContactForm() {
     const [errors, setErrors] = useState({}); // Object to hold validation errors
 
     // REPLACE THIS WITH YOUR GOOGLE APPS SCRIPT URL
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby52EUjXLsw9WFuqcappSy7F8JoaWvWso_yPdoT0gbvQJ6I_TDilJJ6kb8C8jV5YrU9NA/exec";
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzybJlG2Z_NOmZFhuZCAnI7iTPkN4acoHzwqLiSVwmMCzL_NSna-586HpUOkQ6Me34Fdg/exec";
 
     const validate = (data) => {
         const newErrors = {};
