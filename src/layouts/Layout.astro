@@ -1,0 +1,62 @@
+---
+import "../styles/global.css";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+
+		<script>
+			import Lenis from "lenis";
+
+			const lenis = new Lenis();
+
+			function raf(time) {
+				lenis.raf(time);
+				requestAnimationFrame(raf);
+			}
+
+			requestAnimationFrame(raf);
+		</script>
+	</head>
+	<body
+		class="bg-slate-950 text-white overflow-x-hidden antialiased selection:bg-cyan-500 selection:text-white"
+	>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	html.lenis,
+	html.lenis body {
+		height: auto;
+	}
+
+	.lenis.lenis-smooth {
+		scroll-behavior: auto !important;
+	}
+
+	.lenis.lenis-smooth [data-lenis-prevent] {
+		overscroll-behavior: contain;
+	}
+
+	.lenis.lenis-stopped {
+		overflow: hidden;
+	}
+
+	.lenis.lenis-scrolling iframe {
+		pointer-events: none;
+	}
+</style>

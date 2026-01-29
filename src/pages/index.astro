@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.jsx";
+import Section from "../components/Section.jsx";
+---
+
+<Layout title="Astro + Lenis + React Demo">
+	<main>
+		<Hero client:load />
+
+		<div class="relative z-20 bg-slate-950 pb-20">
+			<Section
+				client:visible
+				title="Butter Smooth Scrolling"
+				description="Lenis provides a normalize scroll experience across all browsers. It's built on modern web standards and is incredibly lightweight, ensuring your site remains performant."
+				color="cyan"
+			/>
+
+			<Section
+				client:visible
+				title="Interactive React Components"
+				description="Seamlessly integrate React components within your Astro islands. Hydrate them only when needed using client directives for optimal performance."
+				reverse={true}
+				color="purple"
+			/>
+
+			<Section
+				client:visible
+				title="TailwindCSS v4 Power"
+				description="Style your application with the utility-first power of TailwindCSS. Now even faster and simpler with the latest v4 engine and Vite integration."
+				color="blue"
+			/>
+		</div>
+
+		<footer
+			class="py-12 border-t border-slate-800 text-center text-slate-500"
+		>
+			<p>Built with Astro, React, and Lenis.</p>
+		</footer>
+	</main>
+</Layout>
