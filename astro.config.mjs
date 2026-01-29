@@ -6,6 +6,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://JordanFriesen.github.io',
+  base: '/astro-lenis-demo',
   integrations: [react()],
 
   vite: {
