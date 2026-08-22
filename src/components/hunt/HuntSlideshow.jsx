@@ -127,6 +127,8 @@ export default function HuntSlideshow() {
 							alt=""
 							draggable={false}
 							className={`h-full w-full object-cover select-none ${
+								isMobile ? 'object-top' : 'object-center'
+							} ${
 								i === index && !reduceMotion && isMobile === false
 									? 'hunt-kenburns'
 									: ''
