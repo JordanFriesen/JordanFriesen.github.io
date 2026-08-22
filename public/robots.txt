@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /the-hunt
+Disallow: /the-hunt/

@@ -1,0 +1,43 @@
+---
+import HuntPage from '../components/hunt/HuntPage.jsx';
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+		<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<meta name="description" content="" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>The Hunt</title>
+	</head>
+	<body class="overflow-hidden bg-black text-white antialiased selection:bg-amber-500 selection:text-black">
+		<main class="relative h-dvh w-screen">
+			<HuntPage client:load />
+		</main>
+	</body>
+</html>
+
+<style is:global>
+	@keyframes hunt-kenburns {
+		from {
+			transform: scale(1);
+		}
+		to {
+			transform: scale(1.08);
+		}
+	}
+
+	.hunt-kenburns {
+		animation: hunt-kenburns 8s ease-out forwards;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.hunt-kenburns {
+			animation: none;
+		}
+	}
+</style>
